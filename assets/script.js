@@ -25,6 +25,16 @@ menuItems.forEach(item => {
     });
 });
 
+// Fecha o menu ao clicar fora dele
+document.addEventListener('click', function (event) {
+    const isClickInsideMenu = menu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnToggle) {
+        menu.classList.remove('active');
+    }
+});
+
 // Adiciona/remova a classe 'scrolled' ao scrollar
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('.navegacao');
