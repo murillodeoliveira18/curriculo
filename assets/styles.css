@@ -541,12 +541,13 @@ h1 {
 
     .menu-toggle {
         display: block;
+        cursor: pointer;
+        z-index: 1100;
     }
 
     .foto-perfil {
         width: 65%;
-        height: 50%px;
+        height: 50%;
+        object-fit: cover;
     }
-
-
 }
